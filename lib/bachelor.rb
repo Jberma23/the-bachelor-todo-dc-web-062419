@@ -59,4 +59,8 @@ def get_average_age_for_season(data, season)
         list_from << contestants["age"].to_s
       end
       age = Math.average(list_age)
+    end
+  end
+end
+return age
 end
