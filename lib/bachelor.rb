@@ -51,14 +51,16 @@ return list_from[0].to_s
 end
 
 def get_average_age_for_season(data, season)
-  list_age = []
-  data.each do |season, array|
-    array.each do |contestants|
-      contestants.each do |contestant, contestant_data|
-        if contestant_data == age
-        list_from << contestants["age"].to_s
+  data[season].each do |contestants|
+    contestants.each do |attributes, value|
+      if attributes == "age"
+        age_list = contestants["age"]
+        return age_list.split(" ")
       end
-      age = Math.average(list_age)
+    end
+  end
+  end
+      age = Math.average(age_list)
     end
   end
 end
