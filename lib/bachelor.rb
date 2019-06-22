@@ -30,7 +30,10 @@ def count_contestants_by_hometown(data, hometown)
         if contestant_data == hometown
         list_from << contestants["name"]
       end
-      return list_from.length
+    end
+  end
+end
+num_from = list_from.length
 end
 
 def get_occupation(data, hometown)
