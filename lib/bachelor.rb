@@ -37,7 +37,17 @@ num_from = list_from.length
 end
 
 def get_occupation(data, hometown)
-  # code here
+  list_from = []
+  data.each do |season, array|
+    array.each do |contestants|
+      contestants.each do |contestant, contestant_data|
+        if contestant_data == hometown
+        list_from << contestants["occupation"]
+      end
+    end
+  end
+end
+list_from[0].to_s
 end
 
 def get_average_age_for_season(data, season)
